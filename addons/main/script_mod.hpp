@@ -1,5 +1,5 @@
 #define MAINPREFIX z
-#define PREFIX ZxD
+#define PREFIX ZenBrush
 
 #include "script_version.hpp"
 

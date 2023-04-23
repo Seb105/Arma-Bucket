@@ -1,5 +1,5 @@
 class CfgFunctions {
-    class ZxD {
+    class ZenBrush {
         class Terrain {
             PATHTO_FNC(addTerrainHeight);
             PATHTO_FNC(nearestTerrainPoint);

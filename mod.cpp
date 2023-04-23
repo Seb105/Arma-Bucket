@@ -1,5 +1,5 @@
 name = "ZEN x Deformer";
-dir = "@ZxD";
+dir = "@ZenBrush";
 author = "Seb";
 actionName = "Website";
 action = "http://www.carpenoctem.co";
