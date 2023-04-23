@@ -1,0 +1,13 @@
+name = "ZEN x Deformer";
+dir = "@ZxD";
+author = "Seb";
+actionName = "Website";
+action = "http://www.carpenoctem.co";
+description = "ZEN x Deformer";
+tooltip = "ZEN x Deformer";
+tooltipOwned = "ZEN x Deformer";
+overview = "ZEN x Deformer";
+overviewText = "ZEN x Deformer";
+logoSmall	 = "logoSmall.paa";	    // Display next to the item added by the mod
+logo		 = "logoSmall.paa";			// Logo displayed in the main menu
+logoOver	 = "logoSmall.paa";	
