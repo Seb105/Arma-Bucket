@@ -1,5 +1,5 @@
 #define MAINPREFIX z
-#define PREFIX ZenBrush
+#define PREFIX Bucket
 
 #include "script_version.hpp"
 

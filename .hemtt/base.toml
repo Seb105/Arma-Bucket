@@ -1,5 +1,5 @@
-name = "ZenBrush"
-prefix = "ZenBrush"
+name = "Bucket"
+prefix = "Bucket"
 author = "Seb"
 template = "cba"
 mainprefix = "z"

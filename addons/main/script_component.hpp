@@ -1,17 +1,17 @@
 #define COMPONENT main
-#include "\z\ZenBrush\addons\main\script_mod.hpp"
+#include "\z\Bucket\addons\main\script_mod.hpp"
 
 // #define DEBUG_MODE_FULL
 // #define DISABLE_COMPILE_CACHE
 
-#ifdef DEBUG_ENABLED_ZenBrush
+#ifdef DEBUG_ENABLED_Bucket
     #define DEBUG_MODE_FULL
 #endif
     #ifdef DEBUG_SETTINGS_OTHER
-    #define DEBUG_SETTINGS DEBUG_SETTINGS_ZenBrush
+    #define DEBUG_SETTINGS DEBUG_SETTINGS_Bucket
 #endif
 
-#include "\z\ZenBrush\addons\main\script_macros.hpp"
+#include "\z\Bucket\addons\main\script_macros.hpp"
 
 #define IDD_TERRAIN_EDITOR 45100
 #define IDC_SIZE_SLIDERTEXT 45101

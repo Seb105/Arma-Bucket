@@ -1,1 +1,1 @@
-#include "\z\ZenBrush\addons\main\script_component.hpp"
+#include "\z\Bucket\addons\main\script_component.hpp"

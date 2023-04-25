@@ -1,5 +1,5 @@
 #include "script_component.hpp"
-params ["_cursorPos", "_rectangle", "_width", "_length", "_angle", "_canEdit"];
+params ["_cursorPos", "_rectangle", "_width", "_length", "_angle", "_canEdit", "_smoothness"];
 private _gridSize = (_width max _length) * 3;
 getTerrainInfo params ["", "", "_cellsize", "_resolution"];
 private _gridSideLength = ceil (_gridSize / _cellsize);
@@ -65,10 +65,17 @@ private _edges = if (_rectangle) then {
     };
     _edges
 };
-_edges = _edges apply {
+private _edgesOuter = _edges apply {
     [
         _x#0 vectorAdd _cursorPos,
         _x#1 vectorAdd _cursorPos
+    ]
+};
+private _invertSmooth = 1 - _smoothness;
+private _edgesInner = _edges apply {
+    [
+        (_x#0 vectorMultiply (_invertSmooth)) vectorAdd _cursorPos,
+        (_x#1 vectorMultiply (_invertSmooth)) vectorAdd _cursorPos
     ]
 };
 private _edgeColour = if (_canEdit) then {
@@ -80,7 +87,7 @@ private _edgeColour = if (_canEdit) then {
     _x params ["_start", "_end"];
     drawLine3D [_start, _end, _edgeColour];
     drawIcon3D ["\A3\ui_f\data\igui\cfg\simpleTasks\types\default_ca", _edgeColour, _start, 0.25, 0.25, 0];
-} forEach _edges;
+} forEach (_edgesOuter + _edgesInner);
 
 
 /* Drawing grid of terrain cells */

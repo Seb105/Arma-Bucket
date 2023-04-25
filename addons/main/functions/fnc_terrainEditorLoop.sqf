@@ -12,7 +12,7 @@
     _settings params ["_width", "_length", "_speed", "_angle", "_smoothness", "_modifyObjects", "_rectangle", "_flattenMode"];
     private _cursorPos = screenToWorld (getMousePosition);
     _cursorPos set [2, 0];
-    [_cursorPos, _rectangle, _width, _length, _angle, _canEdit] call FUNC(drawBrush);
+    [_cursorPos, _rectangle, _width, _length, _angle, _canEdit, _smoothness] call FUNC(drawBrush);
     if (!_canEdit) exitWith {};
     private _raiseStatus = inputAction "curatorGroupMod";
     private _lowerStatus = inputAction "curatorMoveY";
