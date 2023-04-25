@@ -12,6 +12,7 @@
 #endif
 
 #include "\z\ZenBrush\addons\main\script_macros.hpp"
+
 #define IDD_TERRAIN_EDITOR 45100
 #define IDC_SIZE_SLIDERTEXT 45101
 #define IDC_SIZE_SLIDERWIDTH 45102
