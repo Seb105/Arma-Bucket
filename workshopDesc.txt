@@ -1,0 +1,26 @@
+[h1]Bucket: Zeus Terrain Modification[/h1]
+
+Modify terrain in Zeus.
+
+[H1]FEATURES:[/H1]
+- Modify terrain in Zeus
+- Multiplayer compatible
+- Customisable tool pallete
+- Automatic server rate limiting (this mod won't let you crash the server by trying to do too much at once)
+
+[h1]Compatability[/h1]
+The restore terrain height commands will not be able to restore terrain to before to when it was first touched by TerrainLib.
+
+[h1]How to use[/h1]
+- Right click in Zeus and press the "modify terrain" context menu action to open the interface
+- Customise settings using interface
+- Hold CTRL/ALT to use the modes provided
+
+[b]Code & Licensing[/b]
+Please submit bug reports or feature requests to this projects [url=https://github.com/Seb105/Arma-Bucket]GitHub[/url]
+
+[h1] Looking for an Arma community? Check CNTO out: [/h1]
+
+https://www.carpenoctem.co/
+
+https://www.youtube.com/watch?v=QE8tMdhDYjI
