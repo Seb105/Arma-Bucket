@@ -1,6 +1,7 @@
 PREP(drawBrush);
 PREP(getUIParams);
 PREP(initDisplay);
+PREP(modifyTerrain);
 PREP(terrainEditorLoop);
 PREP(uiAngleSliderPosChanged);
 PREP(uiSizeSliderPosChanged);

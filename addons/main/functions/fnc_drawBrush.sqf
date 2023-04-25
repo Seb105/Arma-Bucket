@@ -83,10 +83,9 @@ private _edgeColour = if (_canEdit) then {
 } forEach _edges;
 
 
-
-
-
 /* Drawing grid of terrain cells */
+
+
 _cursorPosNearestCell = _cursorPos apply {
     (floor (_x/_cellsize)) * _cellsize
 };
@@ -99,7 +98,7 @@ private _segmentLength = (ceil (_gridSideLength / _numSegments));
 private _gridSideLengthNew = _numSegments * _segmentLength;
 private _halfSideLength= _gridSideLengthNew / 2;
 for "_i" from -_halfSideLength to _halfSideLength do {
-    for "_j" from -_halfSideLength to _halfSideLength step _segmentLength do {
+    for "_j" from -_halfSideLength to (_halfSideLength - _segmentLength) step _segmentLength do {
         private _start = [_i, _j, 0] vectorMultiply _cellsize;
         private _end = [_i, _j+_segmentLength, 0] vectorMultiply _cellsize;
         _grid pushBack [

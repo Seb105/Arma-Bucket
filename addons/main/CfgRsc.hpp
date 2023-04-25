@@ -1,4 +1,4 @@
-#define FONT_H ((((safezoneW / safezoneH) min 1.2) / 1.4) / 25)
+#define FONT_H ((((safezoneW / safezoneH) min 1.2) / 1.5) / 25)
 #define FONT_W (FONT_H / pixelH * pixelW)
 #define GAP_W (pixelW * 2)
 #define GAP_H (pixelH * 2)
@@ -21,8 +21,8 @@ class RscControlsGroupNoScrollbars;
 class GVAR(RscTerrainEditor) : RscControlsGroupNoScrollbars {
     idc = IDD_TERRAIN_EDITOR;
     w = 2;
-    x = QUOTE(-1);
-    y = QUOTE(-0.8);
+    x = QUOTE(-safezoneW/3.5);
+    y = QUOTE(-safezoneH/2.5);
     class Controls {
         class Title: ctrlStaticTitle {
             x = QUOTE(CENTRE_X);
@@ -33,7 +33,7 @@ class GVAR(RscTerrainEditor) : RscControlsGroupNoScrollbars {
             text = "Terrain Editor";
         };
         class Background: ctrlStatic {
-            colorBackground[] = {0, 0, 0, 0.8};
+            colorBackground[] = {0, 0, 0, 0.35};
             x = QUOTE(CENTRE_X);
             y = QUOTE(CENTRE_Y);
             w = QUOTE(TOTAL_W);
@@ -174,16 +174,16 @@ class GVAR(RscTerrainEditor) : RscControlsGroupNoScrollbars {
             h = QUOTE(FONT_H*1.5);
             sizeEx = QUOTE(FONT_H);
             text = "Exit";
-            onButtonClick = QUOTE((ctrlParentControlsGroup (_this#0)) spawn {ctrlDelete _this})
+            onButtonClick = QUOTE(_this spawn {params ['_ctrl']; private _main = ctrlParentControlsGroup _ctrl; ctrlDelete _main;});
         };
         class ControlsHintText: ctrlStatic {
             idc = -1;
-            x = QUOTE(CENTRE_X + FONT_W + SCROLLGROUP_W*3);
-            y = QUOTE(CENTRE_Y + ELEMENT_HEIGHT + GAP_H);
-            w = QUOTE(FONT_H*25);
+            x = QUOTE(CENTRE_X + FONT_W + SCROLLGROUP_W*2);
+            y = QUOTE(CENTRE_Y - (FONT_H * 1.2) - GAP_H);
+            w = QUOTE(FONT_H*30);
             h = QUOTE(FONT_H);
-            sizeEx = QUOTE(FONT_H);
-            text = "LCTRL: Raise/Flatten, LALT: Lower/Restore";
+            sizeEx = QUOTE(FONT_H*1.1);
+            text = "Controls: LCTRL: Raise/Flatten |  LALT: Lower/Restore";
         };
     };
 };
