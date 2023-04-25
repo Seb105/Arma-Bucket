@@ -6,7 +6,7 @@ class CfgPatches {
         units[] = {};
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
-        requiredAddons[] = {};
+        requiredAddons[] = {"zen_context_menu", "zen_dialog", "TerrainLib_main"};
         author = "Seb";
         VERSION_CONFIG;
     };
