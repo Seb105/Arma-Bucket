@@ -10,6 +10,5 @@ private _valueCtrl = _dialog controlsGroupCtrl (_idc + 1);
 private _textCtrl = _dialog controlsGroupCtrl IDC_SIZE_SLIDERTEXT;
 private _sliderWidth = _dialog controlsGroupCtrl IDC_SIZE_SLIDERWIDTH;
 private _sliderLength = _dialog controlsGroupCtrl IDC_SIZE_SLIDERLENGTH;
-private _width = (sliderPosition _sliderWidth)^3*_maxDiameter + _minDiameter;
-private _length = (sliderPosition _sliderLength)^3*_maxDiameter + _minDiameter;
+([sliderPosition _sliderWidth, sliderPosition _sliderLength] call FUNC(getBrushSizeActual)) params ["_width", "_length"];
 _textCtrl ctrlSetText (format ["Size: (%1 / %2)m", _width toFixed 2, _length toFixed 2]);

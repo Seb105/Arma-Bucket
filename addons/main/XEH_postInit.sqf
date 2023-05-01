@@ -1,9 +1,12 @@
 #include "script_component.hpp"
 
+if (isServer) then {
+    missionNameSpace setVariable [QGVAR(canEdit),true,true];
+};
 private _action = [
     "Modify Terrain",
     "Modify Terrain",
-    "\a3\ui_f\data\igui\rsctitles\mpprogress\timer_ca.paa",
+    "\a3\ui_f\data\Map\MapControl\rock_ca.paa",
     {
         0 spawn FUNC(initDisplay)
     }

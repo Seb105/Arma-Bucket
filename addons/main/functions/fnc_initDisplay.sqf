@@ -10,8 +10,8 @@ private _ctrl = _zenDisplay ctrlCreate [QGVAR(RscTerrainEditor), -1];
 ];
 (_ctrl controlsGroupCtrl IDC_SIZE_SLIDERWIDTH) call FUNC(uiSizeSliderPosChanged);
 
-(_ctrl controlsGroupCtrl IDC_SPEED_SLIDER) sliderSetRange [0.1, 50];
-(_ctrl controlsGroupCtrl IDC_SPEED_SLIDER) sliderSetPosition 10;
+(_ctrl controlsGroupCtrl IDC_SPEED_SLIDER) sliderSetRange [0, 1];
+(_ctrl controlsGroupCtrl IDC_SPEED_SLIDER) sliderSetPosition 0.4;
 (_ctrl controlsGroupCtrl IDC_SPEED_SLIDER) call FUNC(uiSpeedSliderPosChanged);
 
 (_ctrl controlsGroupCtrl IDC_ANGLE_SLIDER) sliderSetRange [0, 360];

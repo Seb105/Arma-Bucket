@@ -1,5 +1,6 @@
 #include "script_component.hpp"
 params ["_args", "_mode"];
+if !(GVAR(canEdit)) exitWith {};
 missionNameSpace setVariable [QGVAR(canEdit), false, true];
 private _fnc = switch _mode do {
     case 0: {

@@ -27,3 +27,5 @@
 #define IDC_OBJECTS 45111
 #define IDC_FLATTEN 45112
 #define IDC_EXIT 45113
+
+#define EDIT_DELAY 0.25

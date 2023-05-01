@@ -1,4 +1,6 @@
 PREP(drawBrush);
+PREP(getBrushSizeActual);
+PREP(getSpeedActual);
 PREP(getUIParams);
 PREP(initDisplay);
 PREP(modifyTerrain);
